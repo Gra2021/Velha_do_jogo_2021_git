@@ -21,9 +21,9 @@ int menu(void)
 {
     int opcao;
         
-        printf("\t\t*********Vamos para o Velha do Jogo 2021**************\n\n");
-        printf("\n1.Jogar\n");
-        printf("0.Sair\n");
+        printf("\t\t*********Vamos para o Velha do Jogo 2021**************\n\n");// Tela inicial do jogo
+        printf("\n1.Jogar\n");//seleciona 1 vai direto para jogo
+        printf("0.Sair\n");//seleciona 0 vai finaliza o jogo
         printf("\nOpcao: ");
         scanf("%d", &opcao);
  
@@ -90,7 +90,7 @@ void exibeTabuleiro(int tabuleiro[][DIM])
 
     for (linha = 0 ; linha < DIM ; linha++)
     {
-        printf("            ");
+        printf("            ");// cria as primeiras linhas 0,1,6,7,8
         printf("            |            |            ");
         putchar('\n');
         printf("            ");
@@ -107,12 +107,12 @@ void exibeTabuleiro(int tabuleiro[][DIM])
             if(coluna != (DIM - 1))
                printf("|");
         }
-        if (linha != (DIM - 1))    {
+        if (linha != (DIM - 1))    {// cria a linha 2 e 5
             printf("\n");
             printf("            ");
             printf("____________|____________|____________");
         }else{
-            printf("\n");
+            printf("\n");// cria a linha 3 e 4
             printf("            ");
             printf("            |            |            ");
         }
