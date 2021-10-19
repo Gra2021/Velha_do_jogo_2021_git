@@ -61,7 +61,7 @@ int clear()
      CONSOLE_SCREEN_BUFFER_INFO info;
      HANDLE H = GetStdHandle(STD_OUTPUT_HANDLE);
      COORD origem = { 0,0 };
-     int total;
+     DWORD total;
      if (H == INVALID_HANDLE_VALUE) return -1;
      GetConsoleScreenBufferInfo(H, &info);
      int r = FillConsoleOutputCharacter(H, (TCHAR)' ',
